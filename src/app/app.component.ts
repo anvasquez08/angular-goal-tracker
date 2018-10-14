@@ -10,7 +10,6 @@ import { Goal } from './goal'
 
 export class AppComponent {
   title = this.goalDataService.title;
-  goalArr = this.goalDataService.goals
 
   constructor( private goalDataService: GoalDataService ){
     console.log('curr goals',  this.goalDataService.goals)
@@ -19,6 +18,11 @@ export class AppComponent {
   onAddGoal(goal: Goal) {
     console.log('App Component', goal)
     this.goalDataService.addGoal(goal)
+  }
+
+  // why get??
+  get goals() {
+    return this.goalDataService.getAllGoals()
   }
   
 }

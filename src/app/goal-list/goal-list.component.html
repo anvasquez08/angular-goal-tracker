@@ -1,3 +1,11 @@
-<p>
-  goal-list works!
-</p>
+<section>
+  <h4>Goal List</h4>
+  <div *ngIf="goals.length > 0">
+    <ul>
+      <li *ngFor="let goal of goals">
+        <app-goal-item [goal]="goal"></app-goal-item>
+      </li>
+    </ul>
+  
+  </div>
+</section>

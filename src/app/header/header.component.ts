@@ -17,6 +17,7 @@ export class HeaderComponent {
     console.log('Header Component', this.newGoal)
     this.add.emit(this.newGoal);
     this.newGoal = new Goal() 
+    // the top line avoids two way data binding.. Check this! 
   }
 
   constructor() { }
