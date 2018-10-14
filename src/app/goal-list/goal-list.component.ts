@@ -10,7 +10,15 @@ export class GoalListComponent implements OnInit {
   @Input() 
   goals: Goal[];
 
+  @Output()
+  togglePriority: EventEmitter<Goal> = new EventEmitter()
+
+  toggleGoalPriority(goal: Goal) {
+    console.log('Goal Item')
+    this.togglePriority.emit(goal)
+  }
   
+
   constructor() {}
   ngOnInit() {}
 

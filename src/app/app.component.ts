@@ -20,7 +20,11 @@ export class AppComponent {
     this.goalDataService.addGoal(goal)
   }
 
-  // why get??
+  onTogglePriority(goal: Goal) {
+    console.log('App Component', goal)
+    this.goalDataService.toggleGoalPriority(goal)
+  }
+
   get goals() {
     return this.goalDataService.getAllGoals()
   }

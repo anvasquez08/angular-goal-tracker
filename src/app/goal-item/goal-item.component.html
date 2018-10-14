@@ -1,3 +1,9 @@
-<p>
- {{goal.description}}
-</p>
+<section>
+  <div>Description: {{goal.description}}</div> 
+  <div >Priority: {{goal.priority}}</div> 
+  <button (click)="toggleGoalPriority(goal)">Change Priority</button>
+  <div>Id: {{goal.id}} </div> 
+  <div>Creation Date: {{goal.date | date}}</div>
+</section>
+
+

@@ -3,7 +3,7 @@
   <div *ngIf="goals.length > 0">
     <ul>
       <li *ngFor="let goal of goals">
-        <app-goal-item [goal]="goal"></app-goal-item>
+        <app-goal-item [goal]="goal" (togglePriority)="onTogglePriority($event)"></app-goal-item>
       </li>
     </ul>
   

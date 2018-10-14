@@ -27,4 +27,23 @@ export class GoalDataService {
   getAllGoals(): Goal[] {
     return this.goals
   }
+
+  // 3) why not anything after numner? 
+  toggleGoalPriority(goal: Goal) {
+    let newGoal = this.updateGoalById(goal.id, {
+      priority: !goal.priority
+    })
+    return newGoal
+  }
+
+  getGoalById(id: number) : Goal {
+    return this.goals.filter(goal => goal.id === id).pop()
+  }
+
+  updateGoalById(id: number, values: Object = {} ): Goal {
+    let curGoal = this.getGoalById(id)
+    if (!curGoal) return null
+    Object.assign(curGoal, values)
+    return curGoal
+  }
 }
