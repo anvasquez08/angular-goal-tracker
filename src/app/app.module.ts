@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { GoalDataService } from './goal-data.service';
 import { HeaderComponent } from './header/header.component';
 import { GoalListComponent } from './goal-list/goal-list.component';
-import { GoalItemComponent } from './goal-item/goal-item.component'
+import { GoalItemComponent } from './goal-item/goal-item.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     GoalListComponent,
-    GoalItemComponent
+    GoalItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -14,11 +14,9 @@ export class GoalItemComponent implements OnInit {
   @Output()
   togglePriority: EventEmitter<Goal> = new EventEmitter()
 
-  onTogglePriority(goal: Goal) {
-    console.log('clicking')
+  toggleGoalPriority(goal: Goal) {
     this.togglePriority.emit(goal)
   }
-
 
   constructor() {}
   ngOnInit() {}

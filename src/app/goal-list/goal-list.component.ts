@@ -13,7 +13,7 @@ export class GoalListComponent implements OnInit {
   @Output()
   togglePriority: EventEmitter<Goal> = new EventEmitter()
 
-  toggleGoalPriority(goal: Goal) {
+  onTogglePriority(goal: Goal) {
     console.log('Goal Item')
     this.togglePriority.emit(goal)
   }
