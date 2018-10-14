@@ -24,7 +24,7 @@ export class AppComponent {
     console.log('App Component', goal)
     this.goalDataService.toggleGoalPriority(goal)
   }
-
+  // typescript has getters and setters
   get goals() {
     return this.goalDataService.getAllGoals()
   }

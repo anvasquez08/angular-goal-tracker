@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
     goals: Goal[]
 
 
-  constructor() {}
-  ngOnInit() {}
+    constructor() {}
+    ngOnInit() {}
 
 }

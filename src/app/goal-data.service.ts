@@ -12,7 +12,7 @@ export class GoalDataService {
 
   constructor() { }
 
-  // 1) why add GoalDataService 
+  //  the GoalDataService is what the function is returning 
   addGoal(goal: Goal): GoalDataService {
 
     if (!goal.id) {
@@ -23,12 +23,11 @@ export class GoalDataService {
     console.log('Goals', this.goals)
     return this
   }
-  // 2) why add Goal []
+
   getAllGoals(): Goal[] {
     return this.goals
   }
 
-  // 3) why not anything after numner? 
   toggleGoalPriority(goal: Goal) {
     let newGoal = this.updateGoalById(goal.id, {
       priority: !goal.priority
